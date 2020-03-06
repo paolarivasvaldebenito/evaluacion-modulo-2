@@ -1,0 +1,55 @@
+1.a)
+Select count (IdServicio)
+from prestacion_servicio
+Where fecha between 01-10-2018 and 26-11-2018;
+
+
+1.b)
+Select VE.id vehiculo, count (PS.id prestacion_servicio)
+from vehiculo VE.idvehiculo, prestacion_servicio PS
+Where VE.Vehiculo = PS.idvehiculo
+group by idvehiculo;
+
+
+
+1.c)
+Select min (contador)
+from (select count (*) as contador
+from prestacion_servicio
+group by codtra) as consulta;
+			
+	
+	
+
+2.
+Create table Empleado (Idempleado int primary key, nombre varchar (20), apellido varchar (20), 
+direccion varchar (20),telefono int, Id departamento foreign key);
+
+
+
+
+3.
+Create table pelicula (Id pelicula int primary key, titulo de distribucion varchar 20, titulo original varchar (20), genero varchar(20), 
+idioma original varchar (20), subtitulos español varchar (20), pais de origen varchar(20), año produccion int, url web varchar (20), duracion int, 
+calificacion varchar (20), fecha de estreno int, resumen varchar (20),Id director varchar (20), Id actor varchar (20));
+
+Create table cine (Id cine varchar (20),nombre varchar (20), direccion varchar (20), telefono int, cantidad salas int,);
+
+Create table cartelera (Id cartelera int primary key, Id funcion varchar (20), Id sala varchar (20), Id pelicula (20));
+
+Create table director  (Id director varchar (20) primary key, nombre varchar (20), nacionalidad varchar(20), cantidad de peliculas dirigidas int);
+
+Create table actor (Id actor varchar (20) primary key, nombre varchar (20), nacionalidad varchar(20), cantidad de peliculas actuadas int);
+
+Create table sala (Id sala varchar (20) primary key, nombre varchar (20), tipo de sala varchar (20), cantidad de butacas int);
+
+Create table funcion (Id funcion varchar (20) primary key, dia de la semana varchar (20), hora inicio int, Id sala varchar (20), Id pelicula varchar (20));
+
+Create table opinion (Id opinion varchar (20) primary key, Id pelicula varchar (20), nombre varchar (20), edad int, fecha varchar (20), calificacion varchar (20));
+
+
+
+ 
+
+
+
